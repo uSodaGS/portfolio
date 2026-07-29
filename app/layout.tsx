@@ -1,23 +1,27 @@
-import "./globals.css"
-import { Inter } from "next/font/google"
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Gustavo Ribeiro | Perfil Profissional",
-  description: "Portfólio profissional de Desenvolvimento e Dados",
-}
+  title: "Gustavo Ribeiro | Desenvolvedor Full Stack",
+  description:
+    "Portfólio de Gustavo Ribeiro, Desenvolvedor Full Stack especializado em Next.js, React, TypeScript, Python e PostgreSQL.",
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="pt-BR">
-      <body className="bg-black text-white">
+      <body className={`${inter.className} bg-[#09090B] text-white antialiased`}>
         {children}
       </body>
     </html>
-  )
+  );
 }

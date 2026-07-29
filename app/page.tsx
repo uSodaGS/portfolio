@@ -1,25 +1,35 @@
-import Header from "../components/Header"
-import Hero from "../components/Hero"
-import About from "../components/About"
-import Certifications from "../components/Certifications"
-import Goals from "../components/Goals"
-import Footer from "../components/Footer"
-import Contact from "@/components/Contact";
+import Navbar from "@/components/layout/Navbar";
+import Background from "@/components/ui/Background";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
+import Goals from "@/components/sections/Goals";
+import Projects from "@/components/sections/Projects";
+import Experience from "@/components/sections/Experience";
+import Technologies from "@/components/sections/Technologies";
 
-
-
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Contact />
-      <About />
-      <Goals />
-      <Certifications />
-      <Footer />
+      <Background />
 
+      <Navbar />
+
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Technologies />
+        <Experience />
+        <Goals />
+        <Certifications />
+        <Contact />
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }
